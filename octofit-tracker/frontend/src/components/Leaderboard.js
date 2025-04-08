@@ -4,9 +4,12 @@ function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState([]);
 
   useEffect(() => {
-    fetch('https://didactic-doodle-xv75pp7vq72p7g-8000.app.github.dev/api/leaderboard/')
+    fetch('https://didactic-doodle-xv75pp7vq72p7gp-3000.app.github.dev/api/leaderboard/')
       .then(response => response.json())
-      .then(data => setLeaderboard(data))
+      .then(data => {
+        console.log('Fetched leaderboard:', data); // Log the response
+        setLeaderboard(data);
+      })
       .catch(error => console.error('Error fetching leaderboard:', error));
   }, []);
 
@@ -24,7 +27,7 @@ function Leaderboard() {
           <tbody>
             {leaderboard.map(entry => (
               <tr key={entry._id}>
-                <td>{entry.user}</td>
+                <td>{entry.user.username || entry.user}</td>
                 <td>{entry.score}</td>
               </tr>
             ))}

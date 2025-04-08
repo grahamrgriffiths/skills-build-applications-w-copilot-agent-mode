@@ -4,7 +4,7 @@ function Teams() {
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
-    fetch('https://didactic-doodle-xv75pp7vq72p7g-8000.app.github.dev/api/teams/')
+    fetch('https://didactic-doodle-xv75pp7vq72p7gp-3000.app.github.dev/api/teams/')
       .then(response => response.json())
       .then(data => setTeams(data))
       .catch(error => console.error('Error fetching teams:', error));
