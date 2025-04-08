@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-t8hibc(cj=vcqzy-%p0-q2b5lb3m$r-y47%6ezp(3w&=c*81wi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'didactic-doodle-xv75pp7vq72p7gp-8000.app.github.dev']
 
 
 # Application definition
