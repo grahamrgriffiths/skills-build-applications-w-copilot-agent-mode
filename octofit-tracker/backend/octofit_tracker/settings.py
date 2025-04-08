@@ -72,7 +72,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "octofit_tracker.wsgi.application"
 
-
+# djongo setup
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
@@ -128,6 +128,7 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Enable CORS
+## Not fit for production
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_METHODS = [
     "GET",
